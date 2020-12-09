@@ -1,7 +1,7 @@
 # lab_5
 
 
-```assembler
+```assembly
 [org 0x7c00]
 
 
