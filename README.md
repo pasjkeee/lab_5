@@ -2,6 +2,18 @@
 
 # Oперационная система
 
+## Компиляция и запуск эмулятора
+
+
+![adaff](https://github.com/pasjkeee/lab_5/blob/main/0.JPG?raw=true)
+
+
+## Результат работы
+
+![adsdfsdfaff](https://github.com/pasjkeee/lab_5/blob/main/1.JPG?raw=true)
+
+![adafwdqwdf](https://github.com/pasjkeee/lab_5/blob/main/2.JPG?raw=true)
+
 ## Функции:
 
 + Сравнить два символа
