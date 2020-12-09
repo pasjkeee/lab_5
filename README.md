@@ -14,10 +14,10 @@
 ```assembly
 [org 0x7c00]    
 
-mov ah, 0x0e ;pechat
+mov ah, 0x0e 
 mov al, 0x0a ; Enter
-int 0x10	;vzaim s ekranom
-mov al, 0x0d ; возврат каретки
+int 0x10	
+mov al, 0x0d 
 
 ```
 
