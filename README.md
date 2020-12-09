@@ -2,21 +2,26 @@
 
 
 ```assembly
-[org 0x7c00]
-
+[org 0x7c00]    
 
 mov ah, 0x0e ;pechat
 mov al, 0x0a ; Enter
 int 0x10	;vzaim s ekranom
 mov al, 0x0d ; возврат каретки
+
+```
+
+```assembly
+
+
 start_:
 mov bx, str1
 call Print
 
 mov ah , 0x00
-int 0x16	;vz s klaviaturoj
+int 0x16	
 mov ah, 0x0e 
-int 0x10	;vzaim s ekranom
+int 0x10	
 mov dx, ax
 
 mov bx, str2
@@ -28,17 +33,26 @@ mov ah, 0x0e
 int 0x10 ;vzaim s ekranom
 mov cx, ax
 
+```
+
+```assembly
+
 mov dh, 0x00     
 mov ch, 0x00
 cmp dx, cx 
 je Equal_ 
 jmp Not_Equal_
 
+```
 
-
+```assembly
 
 End_: 
 jmp areyou_
+
+```
+
+```assembly
 
 Print:
 pusha ;sohr reg v stek
@@ -59,11 +73,19 @@ pusha ;sohr reg v stek
 break_:
 popa
 ret
- 
+
+```
+
+```assembly
+
 Equal_:
 	mov bx, str3
 	call Print
 	jmp End_
+
+```
+
+```assembly
 
 Not_Equal_:
 pusha
@@ -72,6 +94,9 @@ pusha
 popa
 jmp End_
 
+```
+
+```assembly
 
 areyou_:
 mov bx, str5
@@ -84,6 +109,10 @@ cmp al, 0x6E
 je notgood_
 jmp areyou_ 
 
+```
+
+```assembly
+
 good_:
 	mov bx, str6
 	call Print
@@ -94,7 +123,10 @@ notgood_:
 	call Print
 	jmp $	
 
-	
+```
+
+```assembly
+
 myloop_:
 mov ah , 0x00
 int 0x16 ;
@@ -110,11 +142,19 @@ cmp al, 0x71
 je start_
 jmp myloop_
 
+```
+
+```assembly
+
 vniz_:
 mov ah, 0x0e ;pechat
 mov al, 0x0a ; Enter
 int 0x10
 jmp myloop_
+
+```
+
+```assembly
 
 pravo_:
 mov ah, 0x03
@@ -126,6 +166,10 @@ mov bh, 0x00
 int 0x10
 jmp myloop_
 
+```
+
+```assembly
+
 verx_:
 mov ah, 0x03
 mov bh, 0x00
@@ -136,13 +180,20 @@ mov bh, 0x00
 int 0x10
 jmp myloop_
 
+```
+
+```assembly
+
 levo_:
 mov ah, 0x0e ;pechat
 mov al, 0x08 ; Enter
 int 0x10
 jmp myloop_
 
- 
+```
+
+```assembly
+
 str1:
 db 'Input A: ', 0
 str2:
